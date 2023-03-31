@@ -1,0 +1,21 @@
+function makeGrid(e){
+    var grid=document.getElementById('grid');
+    grid.innerHTML = "";
+        grid.style.setProperty("grid-template-columns",'repeat('+e+',1fr)');
+        grid.style.setProperty("grid-template-rows",'repeat('+e+',1fr)');
+        for (let j=0; j<(e*e); j++){
+            var cell=document.createElement('div');
+            cell.className="cell";
+            grid.appendChild(cell)
+        }   
+   
+    const item=document.querySelectorAll(".cell");
+    item.forEach((cell) => {
+        cell.addEventListener("mousemove",() => {
+            cell.style.background="black";
+        });
+    });
+};
+
+makeGrid(16);
+
