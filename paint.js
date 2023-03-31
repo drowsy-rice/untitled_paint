@@ -17,5 +17,9 @@ function makeGrid(e){
     });
 };
 
-makeGrid(16);
+makeGrid(32);
 
+var slider= document.getElementById("slider");
+document.getElementById("slider").addEventListener("input",(e)=>{
+    makeGrid(e.target.value)
+});
