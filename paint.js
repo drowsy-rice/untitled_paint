@@ -1,3 +1,5 @@
+var selectedColor=document.getElementById("selectedColor").value
+
 function makeGrid(e){
     var grid=document.getElementById('grid');
     grid.innerHTML = "";
@@ -12,7 +14,7 @@ function makeGrid(e){
     const item=document.querySelectorAll(".cell");
     item.forEach((cell) => {
         cell.addEventListener("mousemove",() => {
-            cell.style.background="black";
+            cell.style.background=selectedColor;
         });
     });
 };
@@ -23,3 +25,7 @@ var slider= document.getElementById("slider");
 document.getElementById("slider").addEventListener("input",(e)=>{
     makeGrid(e.target.value)
 });
+
+function changeColor(c){
+    selectedColor=c;
+}
