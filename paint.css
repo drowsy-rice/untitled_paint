@@ -1,8 +1,10 @@
 body{
     display: flex;
     justify-content: space-around;
-    padding: 20px;
-    background-color: rgb(20, 17, 17);
+    padding: 40px;
+    background-image: url(paint_photos/windowsbg.jpg);
+    background-position: center;
+    background-size: 100%;
 }
 
 .window{
@@ -13,6 +15,9 @@ body{
     background-color: #bdbdbd;
     height: 55em;
     width: 80em;
+    border: solid 2px black;
+    box-shadow: 2px 2px 4px 5px #3c3d42;
+    user-select:none;
 }
 
 .header{
@@ -23,6 +28,7 @@ body{
     width: auto;
     margin: 5px;
     resize: none;
+    box-shadow: 1px 1px 1px 1px #3c3d41;
 }
 
 .title{
@@ -31,6 +37,7 @@ body{
     font-size: 60px;
     padding: 5px;
     color: white;
+    text-shadow: 2px 2px #3c3d41;
 }
 
 .windowControls{
@@ -41,23 +48,35 @@ body{
     padding: 20px;
 }
 
-#minimize {
-    padding: 15px;
-    margin: 5px;
-    background-color: #bdbdbd;
-}
+    #minimize {
+        padding: 15px;
+        margin: 5px;
+        background-color: #bdbdbd;
+    }
+        #minimize:hover {
+            background-color: rgb(47, 0, 255);
+            transition: ease .05s all;
+        }
 
-#maximize {
-    padding: 15px;
-    margin: 5px;
-    background-color: #bdbdbd;
-}
+    #maximize {
+        padding: 15px;
+        margin: 5px;
+        background-color: #bdbdbd;
+    }
+        #maximize:hover {
+            background-color: rgb(47, 0, 255);
+            transition: ease .05s all;
+        }
 
-#close {
-    padding: 15px;
-    margin: 5px;
-    background-color: #bdbdbd;
-}
+    #close {
+        padding: 15px;
+        margin: 5px;
+        background-color: #bdbdbd;
+    }
+        #close:hover {
+        background-color: red;
+        transition: ease .05s all;
+        }
 
 .midsection{
     display: flex;
@@ -75,9 +94,81 @@ body{
     background-color:#bdbdbd;
     height: 42em;
     width: 30em;
-    margin: 10px;
+    margin: 12px;
     padding: 2px;
+    border: black solid 1px;
+    box-shadow: 1px 1px 3px 4px #434449;
 }
+
+.themes{
+    height: 10em;
+    width: 27em;
+    margin: 30px;
+    font: bold 13px solid;
+    border: dashed blue 4px;
+}
+
+    #classic{
+        background: url(paint_photos/windowsbg.jpg);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: 420px auto;
+    }
+
+        #classic:hover{
+            border: blue 5px solid;
+            cursor: pointer;
+        }
+
+    #primaries{
+        background: url(paint_photos/polkadotsbg.png);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: 420px auto;
+    }
+
+        #primaries:hover{
+            border: 5px solid;
+            border-image: linear-gradient(to bottom right, #fc2727 0%, #2c90fc 25%, #fffb00 50%, #ff0000 75%, #0026ff 100%);
+            border-image-slice: 1;
+            cursor: pointer;
+        }
+
+    #nick{
+        background: url(paint_photos/nickelodeon.jpg);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: 420px auto;
+    }
+
+        #nick:hover{
+            border: rgb(0, 255, 0) 5px solid;
+            cursor: pointer;
+        }
+
+    #kitty{
+        background: url(paint_photos/kittybg.png);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: 420px auto;
+    }
+
+        #kitty:hover{
+            border: rgb(234, 0, 255) 5px solid;
+            cursor: pointer;
+        }
+
+    #batman{
+        background: url(paint_photos/batmanpattern.png);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: 420px auto;
+    }
+
+        #batman:hover{
+            border: rgb(255, 217, 0) 5px solid;
+            cursor: pointer;
+        }
 
 #grid{
     background-color:rgb(249, 253, 255);
@@ -86,6 +177,7 @@ body{
     width: 57em;
     margin: 10px;
     padding: 2px;
+    box-shadow: 2px 2px 2px 2px #3c3d41;
 }
 
 .gridbox{
@@ -98,45 +190,75 @@ body{
     background-color: white;
 }
 
-.cell:hover{
-    background-color: rgb(0, 0, 0);
-    transition: ease .05s all;
-}
+    .cell:hover{
+        background-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+        transition: ease .05s all;
+    }
 
 .footer{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(44, 44, 44);
+    background-color: #2c2c2c;
     height: 5em;
     width: 79.3em;
     margin: 5px;
+    box-shadow: 1px 1px 1px 1px #434344;
 }
 
 .resize{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: rgb(249, 253, 255);
+    background-color: #bdbdbd;
     height: 3em;
     width: 30em;
     margin: 10px;
     padding: 2px;
+    box-shadow: 2px 2px 2px 2px #3c3d41;
 }
 
 #slider{
     width: 100%;
     height: 3em;
+    padding: 0;
+    background: transparent;
 }
+    #slider::-webkit-slider-runnable-track {
+        background: #00027c;
+        height: 6px;
+    }
+
+    #slider::-moz-range-track{
+        background: #00027c;
+        height: 6px;
+    }
+
+    #slider::-webkit-slider-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%; 
+        background: rgb(44, 44, 44);
+        cursor: pointer;
+    }
+    
+    #slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: rgb(44, 44, 44);
+        cursor: pointer;
+    }
 
 .paint{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: rgb(148, 147, 147);
+    background-color: #bdbdbd;
     height: 3em;
     width: 57em;
     margin: 10px;
     padding: 2px;
+    box-shadow: 2px 2px 2px 2px #3c3d41;
 }
 
 .break{
@@ -150,8 +272,8 @@ body{
     width: 22px;
 }
 
-.colores:hover{
-    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
-    border-image-slice: 1;
-}
+    .colores:hover{
+        border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+        border-image-slice: 1;
+    }
 

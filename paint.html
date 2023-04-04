@@ -12,13 +12,20 @@
         <div class="header">
             <div class="title">untitled.paint</div>
             <div class="windowControls">
-                <button id="minimize">-</button>
-                <button id="maximize">O</button>
-                <button id="close">X</button>
+                <button onclick="minmessage()" id="minimize">-</button>
+                <button onclick="maxmessage()" id="maximize">O</button>
+                <button onclick="closemessage()" id="close">X</button>
             </div>
         </div>
         <div class="midsection">
-            <div class="options"></div>
+            <div class="options">
+                <p style="text-align: center;font-size: 30px ;margin-bottom: 5px;">⟢◈⟡THEME⟡◈⟣</p>
+                <button id="classic" class="themes"></button>
+                <button id="primaries" class="themes"></button>
+                <button id="nick" class="themes"></button>
+                <button id="kitty" class="themes"></button>
+                <button id="batman" class="themes"></button>
+            </div>
             <div id="grid" class="gridbox"></div>
         </div>
         <div class="footer">
